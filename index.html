@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Invest Growth</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style2.css">
+
+        <nav>
+            <link rel="icon" type="image/x-icon" href="pic.png">
+        </nav>
+    </head>
+
+    <body>
+        <heading>
+        <img src="pic.png" width="50" height="50" alt="money">
+
+        <h1>Planning your financial future is now easier! Use our calculator to see how your investments can grow over time.</h1>
+    </heading>
+
+        <h2>How to Use:</h2>
+        <ol>
+            <li>Initial Investment: Enter the amount you plan to invest</li>
+            <li>Annual Interest Rate: Input the yearly interest rate (as a percentage)</li>
+            <li>Year of Retirement: Specify the year you plan to retire</li>
+        </ol>
+        <h2>How It Works:</h2>
+        
+        <ul>
+            <li>The calculator uses the compound interest formula to estimate how your investment will grow until your retirement year</li>
+        </ul>
+
+        <form onsubmit="return getCompoundInterest()">
+            <h2>Just fill in your details and discover your investment growth potential!</h2>
+            <p>
+                <label>Initial investment:</label>
+                <input type="text" id="initial" name="initial"/>
+            </p>
+            <p>
+                <label>Anual interest rate:</label>
+                <input type="text" id="interest" name="interest"/>
+            </p>
+            <p>
+                <label for="rate">Year of retirement: (between 2025 and 2100):</label>
+                <input type="number" id="retire" name="retire" min="2025" max="2100">
+            </p>
+            <p>
+                <input type="submit" />
+            </p>
+            <div id="result" hidden></div>
+            </form>
+            <script src="calculator.js"></script>
+        </body>
+
+        </html>
